@@ -1,0 +1,223 @@
+@font-face {
+  font-family: Maginia;
+  src: url(Maginia.otf);
+  font-weight: regular;
+}
+body{
+    background-color: rgb(255, 236, 236);
+}
+#perfume{
+      align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    /* position: absolute; */
+    width: 100%;
+    padding-top: 15vmin;
+    /* top: 60%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    display: grid;
+    grid-template-columns: repeat(5, 0fr);
+    grid-gap: 7rem;
+    /* border: 3px solid black; */
+}
+.bottle {
+    width: 18vmin;
+    height: 16vmin;
+    /* position: relative; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 3vmin;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    border-radius: 50% 50% 6% 6% / 6% 6% 4% 4%;
+    background:
+      radial-gradient(70% 170%, transparent, #f003),
+      radial-gradient(farthest-side at 0% 30%, #3007 60%, transparent 80%) no-repeat 0.25% 8% / 2% 35%,
+      radial-gradient(farthest-side at 100% 30%, #3216 60%, transparent 80%) no-repeat 99.25% 8% / 2% 20%,
+      radial-gradient(farthest-side at 0% 70%, #0007 60%, transparent 80%) no-repeat 0.25% 100% / 2% 20%,
+      radial-gradient(farthest-side at 0% 50%, #fffa, transparent 80%) no-repeat 1px 0% / 3% 100%,
+      radial-gradient(farthest-side at 50% 0%, transparent, #ffa7 30%, transparent) no-repeat 0% 5% / 90% 5%,
+      radial-gradient(farthest-side at 100% 0%, #0003 30%, transparent) no-repeat 100% 5% / 40% 5%,
+      radial-gradient(farthest-side at 0% 0%, #0001 30%, transparent) no-repeat 0% 5% / 40% 5%,
+      radial-gradient(farthest-side at 0% 50%, #0002, transparent 80%) no-repeat 0% 0% / 15% 100%,
+      radial-gradient(farthest-side at 100% 50%, #0001, transparent 80%) no-repeat 100% 0% / 15% 100%,
+      ;
+    
+    background-color: rgb(255, 245, 227);
+    box-sizing: border-box;
+    font-size: 6vmin;
+    white-space: pre;
+    line-height: 5vmin;
+    text-align: center;
+    color: #222d;
+    /* filter: drop-shadow(1.5vmin 1.5vmin 4vmin #0009); */
+    box-shadow:
+      inset 1vmin 0 3vmin #fff8,
+      inset -2vmin 0 2vmin #0003,
+      inset 2vmin 0 2vmin #0003,
+      inset 0 500vmin 1vmin -498vmin #1006,
+      inset 9vmin 0 5vmin -3vmin #0003,
+      inset -9vmin 0 5vmin -3vmin #0003,
+      inset 0 -2vmin 1vmin -1vmin #555a,
+      0.25vmin 2vmin 3vmin -1vmin rgba(74, 74, 74, 0.533);
+    display: inline-block;
+    transition: all 0.5s ease;
+  }
+  
+  .bottle::before, .bottle--floral::before, .bottle--woody::before, .bottle--fruity::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 30%;
+    display: block;
+    width: 40%;
+    height: 40%;
+  
+    background-repeat: no-repeat;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20% 20% 5% 5% / 20% 20% 5% 5%;
+    transform: translate(0, -97%);
+    box-shadow:
+      inset 7vmin 0 5vmin -3vmin #0001,
+      inset -7vmin 0 5vmin -3vmin #0002,
+      inset 0 1vmin 1.5vmin -1.25vmin #fff8
+      ;
+  }
+
+  .bottle--floral::before {
+    background: 
+    radial-gradient(farthest-side at 0% 30%, #fff4, transparent) no-repeat 1px 0% / 4% 100%,
+    radial-gradient(70% 170% at 50% 40%, transparent 50%, #0002),
+    linear-gradient(to right, #0001, #0000, #0002),
+    linear-gradient(rgb(255, 182, 222), rgb(255, 135, 201));
+  }
+
+  .bottle--woody::before {
+    background: 
+    radial-gradient(farthest-side at 0% 30%, #fff4, transparent) no-repeat 1px 0% / 4% 100%,
+    radial-gradient(70% 170% at 50% 40%, transparent 50%, #0002),
+    linear-gradient(to right, #0001, #0000, #0002),
+    linear-gradient(rgb(169, 105, 105), rgb(112, 50, 50));
+    
+  }
+
+  .bottle--fruity::before {
+    background: 
+    radial-gradient(farthest-side at 0% 30%, #fff4, transparent) no-repeat 1px 0% / 4% 100%,
+    radial-gradient(70% 170% at 50% 40%, transparent 50%, #0002),
+    linear-gradient(to right, #0001, #0000, #0002),
+    linear-gradient(rgb(255, 250, 113), rgb(255, 248, 50));
+    
+  }
+
+  .bottle__name {
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: Maginia;
+    font-size: 2vmin;
+    transform: translate(0, -420%);
+    line-height: 100%;
+    /* wrap text */
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+
+  .rose{
+    line-height: 150%;
+  }
+
+  .bottle--light {
+    background-color: #FFFAF1;
+    background: #FFFAF1;
+  }
+
+  .bottle--medium {
+    background-color: #fff1da;
+    background: #fff1da;
+  }
+
+  .bottle--strong {
+    background-color: #ffe9c0;
+    background: #ffe9c0;
+  }
+
+  .bottle__img-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: translate(0, -100%);
+  }
+
+  .bottle__img {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .bottle__img IMG {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Bottle on hover, display image, hide everything */
+  .bottle:hover .bottle__img-container {
+    display: block;
+  }
+
+  .bottle:hover .bottle__name {
+    display: none;
+  }
+
+  .bottle:hover .bottle__text {
+    display: none;
+  }
+
+  .bottle:hover .bottle__img {
+    display: block;
+  }
+
+  .bottle:hover .bottle__img IMG {
+    display: block;
+  }
+
+  .bottle:hover {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  /* Remove pseudo ::before on hover */
+  .bottle:hover::before {
+    display: none;
+  }
+
+  .pdf {
+   margin-top: 3rem;
+   margin-left: 3rem;
+}
